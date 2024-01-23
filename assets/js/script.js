@@ -8,9 +8,8 @@ $(function () {
   var currentDayEl=$("#currentDay")
 
   currentDayEl.text(currentDate.format("dddd, MMM, DD"))
-  console.log(currentDayEl)
 
-  for(var i=9; i<17; i++){
+  for(var i=9; i<18; i++){
     var parentId=$("#hour-" +i)
     var textarea=parentId.children("textarea")
     if(i===currentHour){
@@ -25,8 +24,8 @@ $(function () {
       textarea.addClass("future")
 
     }
-    var value=localStorage.getItem("#hour-" +i)
-    textarea.val()
+    var value=localStorage.getItem("hour-" +i)
+    textarea.val(value)
     }
 
   var saveBtnEl=$(".saveBtn")
@@ -52,7 +51,7 @@ $(function () {
     parentId=$(event.target).parent().attr("id")
     }
 
-    localStorage.setItem(parentId,textarea.val())
+    localStorage.setItem(parentId,textareaEl.val())
     
   } 
 
