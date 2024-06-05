@@ -1,4 +1,4 @@
-# Challenge5-Code-Day-Planner
+# Code-Day-Planner
 
 ## Description
 
